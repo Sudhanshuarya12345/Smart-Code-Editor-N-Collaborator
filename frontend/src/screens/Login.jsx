@@ -23,15 +23,6 @@ const Login = ()=> {
     }
   }, []);
 
-  useEffect(() => {
-    // Clear all authentication tokens and user details on login page visit
-    localStorage.removeItem('token');
-    sessionStorage.removeItem('token');
-    localStorage.removeItem('user');
-    sessionStorage.removeItem('user');
-    if (typeof setUser === 'function') setUser(null);
-  }, []);
-
   function submitHandler(e) {
     e.preventDefault();
     setError("");
